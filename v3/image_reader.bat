@@ -1,1 +1,0 @@
-python image_reader.py
