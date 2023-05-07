@@ -48,10 +48,10 @@ if __name__ == "__main__":
     generator = generator.Generator(device)
 
     all_length = len(mnist_train_dataset) + len(mnist_test_dataset)
-    epochs = 8
+    epochs = 4
 
     for epoch in range(epochs):
-        print("epochs: %d/%d" % (epoch, epochs))
+        print("epochs: %d/%d" % (epoch + 1, epochs))
 
         counter = 0
         for _, image_data_tensor, _ in itertools.chain(mnist_train_dataset, mnist_test_dataset):

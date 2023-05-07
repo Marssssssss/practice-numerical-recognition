@@ -18,7 +18,7 @@ class Discriminator(nn.Module):
         # ReLU - 线性整流函数，一个打勾的形状，能解决 s 型函数的梯度消失问题，缺点在于在负值区也有梯度消失问题
         # activate_function = nn.ReLU
         # LeakyReLU - 带泄漏的线性整流函数，负值区带有一定的梯度，可以自定义负值区的梯度
-        activate_function = (lambda: nn.LeakyReLU(0.2))
+        activate_function = (lambda: nn.LeakyReLU(0.02))
 
         self.model = nn.Sequential(
             nn.Linear(784, 200),
